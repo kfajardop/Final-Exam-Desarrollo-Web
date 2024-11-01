@@ -54,9 +54,9 @@
 
                                         <td >{{ $artistaCancione->nombre }}</td>
                                         <td >{{ $artistaCancione->duracion }}</td>
-                                        <td >{{ $artistaCancione->artista_id }}</td>
-                                        <td >{{ $artistaCancione->genero_id }}</td>
-                                        <td >{{ $artistaCancione->album_id }}</td>
+                                        <td >{{ $artistaCancione->artista->nombre }}</td>
+                                        <td >{{ $artistaCancione->cancionGenero->nombre }}</td>
+                                        <td >{{ $artistaCancione->cancionAlbum->nombre }}</td>
 
                                         <td>
                                             <form action="{{ route('artista-canciones.destroy', $artistaCancione->id) }}" method="POST">
