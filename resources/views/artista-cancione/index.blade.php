@@ -40,9 +40,9 @@
 
                                     <th >Nombre</th>
                                     <th >Duracion</th>
-                                    <th >Artista Id</th>
-                                    <th >Genero Id</th>
-                                    <th >Album Id</th>
+                                    <th >Artista</th>
+                                    <th >Genero</th>
+                                    <th >Album</th>
 
                                     <th></th>
                                 </tr>
