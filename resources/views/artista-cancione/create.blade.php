@@ -1,20 +1,23 @@
-@extends('layouts.app')
+@extends('adminlte::page')
 
-@section('template_title')
-    {{ __('Create') }} Artista Cancione
-@endsection
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
 
 @section('content')
     <section class="content container-fluid">
-        <div class="row">
+        <div class="">
             <div class="col-md-12">
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Artista Cancione</span>
+                        <span class="card-title">{{ __('Update') }} Artista Cancione</span>
                     </div>
                     <div class="card-body bg-white">
-                        <form method="POST" action="{{ route('artista-canciones.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('artista-canciones.update', $artistaCancione->id) }}"  role="form" enctype="multipart/form-data">
+                            {{ method_field('PATCH') }}
                             @csrf
 
                             @include('artista-cancione.form')
@@ -25,4 +28,13 @@
             </div>
         </div>
     </section>
-@endsection
+@stop
+
+@section('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@stop
